@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', main)
-
 const suits = ['hearts', 'diamonds', 'spades', 'clubs']
 const ranks = [
   { name: 'ace', value: 11 },
@@ -25,6 +23,7 @@ const main = () => {
   createDeck()
   shuffleDeck()
   dealToPlayer()
+  dealToDealer()
   console.log(deck)
 }
 
@@ -57,3 +56,26 @@ const dealToPlayer = () => {
   playerHand.push(dealt)
   console.log(playerHand)
 }
+
+const dealToDealer = () => {
+  const dealt = deck.pop()
+  playerHand.push(dealt)
+  console.log(playerHand)
+}
+
+const getPlayerHandTotal = () => {
+  let handTotal
+  for (i = 0; i < playerHand.length; i++) {
+    const card = playerHand[i]
+    if (handTotal) {
+      handTotal += card.value
+    } else {
+      handTotal = card.value
+      {
+        //display the total
+        console.log(handTotal)
+      }
+    }
+  }
+}
+document.addEventListener('DOMContentLoaded', main)
