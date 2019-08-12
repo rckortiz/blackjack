@@ -59,8 +59,8 @@ const dealToPlayer = () => {
 
 const dealToDealer = () => {
   const dealt = deck.pop()
-  playerHand.push(dealt)
-  console.log(playerHand)
+  dealerHand.push(dealt)
+  console.log(dealerHand)
 }
 
 const getPlayerHandTotal = () => {
@@ -78,4 +78,5 @@ const getPlayerHandTotal = () => {
     }
   }
 }
+
 document.addEventListener('DOMContentLoaded', main)
